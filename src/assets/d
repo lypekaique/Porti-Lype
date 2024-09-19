@@ -1,0 +1,38 @@
+<div class="home w-full max-w-full overflow-hidden">
+  <div class="home-intro flex justify-between items-center h-[74vh] bg-cover bg-top bg-no-repeat bg-[linear-gradient(to_right_bottom,rgba(5,8,16,.6),rgba(5,8,16,.6)),url('./../../assets/images/index.svg')] px-20 pt-32 transition-opacity duration-500">
+    <!-- Hidden/Show Classes -->
+    <div class="hidden opacity-0"></div>
+    <div class="show opacity-100">
+      <div class="content w-[55%] pr-24 animate-fadeInLeft">
+        <!-- Content Tertiary -->
+        <div class="content-tertiary max-w-max mb-6">
+          <p class="bg-[#14e95828] rounded-lg text-[#14E956] font-extrabold text-[1.4rem] px-4 py-2 uppercase tracking-wider">
+            Texto Aqui
+            <span class="text-[1.7rem] animate-[wobble_2.5s_infinite] inline-block">✨</span>
+          </p>
+        </div>
+        
+        <!-- Content Primary -->
+        <div class="content-primary mb-8">
+          <h1 class="font-extrabold uppercase tracking-wide text-[3.2rem] md:text-[2.9rem] sm:text-[2.6rem] xs:text-[2.3rem]">
+            Título <span class="font-cyborg text-[4.2rem] text-[#14E956] drop-shadow-[3px_3px_0_#1F2127]">Cyber</span>
+          </h1>
+        </div>
+
+        <!-- Content Secondary -->
+        <div class="content-secondary">
+          <p class="font-bold lowercase text-[18px] leading-[30px] opacity-80 tracking-wider">
+            Texto aqui
+          </p>
+        </div>
+      </div>
+      
+      <!-- Hero Icon -->
+      <div class="hero-icon w-[45%] pb-4 animate-fadeInRight">
+        <svg class="w-[500px] h-[366px] md:w-[430px] md:h-[314px] sm:w-[400px] sm:h-[292px] xs:w-[300px] xs:h-[219px]">
+          <!-- SVG content here -->
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
