@@ -35,9 +35,15 @@ const Main = () => {
             </div>
           </div>
           <div>  {/* Img do ladod o texto */}
-            <img src={atumalaca} class='w-[500px] h-[400px] animate-fade-left animate-once animate-ease-linear animate-normal animate-fill-backwards' />
+            <img src={atumalaca} class='w-[500px] h-[400px] animate-fade-left animate-once animate-ease-linear animate-normal animate-fill-backwards rounded-full ' />
           </div >
 
+        </div>
+        <div class='items-center flex flex-col py-20'>
+          <div class='bg-[#12141d] rounded-[12px] p-[0.8rem] px-[2rem] flex justify-center items-center mb-[5rem] shadow-[0px_0px_4px_1px_rgba(20,233,86,1)]'>
+            <h2 class='uppercase font-[900] text-[#14E956] text-shadow-custom'>Atumalaca 4</h2>
+
+          </div>
         </div>
       </div>
     </div>
