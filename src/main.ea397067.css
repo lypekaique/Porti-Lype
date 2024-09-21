@@ -18,15 +18,6 @@ body {
     padding: 0
 }
 
-@font-face {
-    font-family: Cyborg;
-    src: local("Cyborg"),url(/static/media/Cyborg.074aa61276a2a2f121a4.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: ExoSpace;
-    src: local("ExoSpace"),url(/static/media/ExoSpace.606b1a1e5fed2c8afb24.ttf) format("truetype")
-}
 
 ::selection {
     background-color: #14e956;

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'MinhaFontePersonalizada';
+    font-family: 'Future';
     src: url('./assets/Fonts/space-future.space-future-bold.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;

@@ -13,7 +13,7 @@ export default {
         'custom-green': '#14E956',
       },
       fontFamily: {
-        spacefuture: ['spacefuture'],
+        spacefuture: ['spacefuture,'],
       },
       boxShadow: {
         custom: '3px 3px 0 #1F2127, -1px -1px 0 #1F2127, 1px -1px 0 #1F2127, -1px 1px 0 #1F2127, 1px 1px 0 #1F2127',
@@ -28,7 +28,7 @@ export default {
       },
       letterSpacing: {
         'widee': '.04em'
-      }
+      },
 
 
 
@@ -39,4 +39,13 @@ export default {
   plugins: [
     require('tailwindcss-animated')
   ],
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.transform-none-important': {
+          transform: 'none !important',
+        },
+      }
+
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    },
 }

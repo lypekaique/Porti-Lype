@@ -1,52 +1,79 @@
-import atumalaca from '../../assets/IMG/atumalaca.gif';
-import AOS from 'aos';
+import '../principais.scss'
+{/*import AOS from 'aos';*/}
 import 'aos/dist/aos.css';
-import React, { useState, useEffect } from 'react';
-
-const Main = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    AOS.init({ duration: 2000, easing: 'ease' });
-  }, []);
-  AOS.init({
-    duration: 1000, // duração da animação (em milissegundos)
-    easing: 'ease', // tipo de easing
-    once: true, // anima apenas uma vez, não a cada scroll
-  });
-  
+{/*import React, { useState, useEffect } from 'react'; */}
+import './style.scss'
+import face from '../../assets/IMG/1714930728994.jfif'
 
 
-  return (
-    <div>
-      <div class='max-w-[100%] m-0 w-[100%] overflow-hidden'> {/* Body */}
-        <div class="flex justify-between items-center h-[74vh] bg-cover bg-top bg-gradient-to-r from-[rgba(5,8,16,0.6)] to-[rgba(5,8,16,0.6)] px-20 pt-32"> {/* Div com background pro efeito parallax falta adiciona ainda  */}
-          <div class='w-[55%] pr-[6rem] animate-fade-right animate-duration-[2000ms] animate-ease-out animate-fill-forwards'> {/* Conteudo */}
-            <div class='w-max m-6 ' > {/* Primeiro texto */}
-                <p class="bg-[#14e95828] rounded-lg text-[#14E956] text-xl font-black m-0 px-4 py-2 capitalize tracking-wide font-spacefuture">
-                 Atumalaca
-                </p>
+const main = () => {
+    return(
+        <div>
+            <div className='max-w-full w-full m-0 overflow-hidden'>   {/*Main*/}
+                <div className="home-intro">
+                        <div className='w-[55%] pr-24 md:w-full md:flex md:flex-col md:items-start md:pr-0 sm:w-full sm:flex sm:flex-col sm:items-start sm:p-0 sm:mb-8 xs:w-full xs:flex xs:flex-col xs:items-center xs:p-0'> {/*Primeira Paginaa*/}
+                            <div className='m-6 w-max'>  {/*Conteudo textos*/}
+                                <p className="bg-[#14e95828] rounded-lg text-[#14E956] text-[1.4rem] font-extrabold m-0 p-2.5 capitalize tracking-[0.05em]
+                                md:text-[1.2rem]
+                                sm:text-[1rem]
+                                xs:text-[0.85rem] xs:p-[0.27rem_0.7rem] xs:flex xs:items-center
+                                max-xs:text-[0.75rem] max-xs:p-[0.2rem_0.5rem] max-xs:flex max-xs:items-center">
+                                    <span className="font-spacefuture text-[1.7rem] animate-[wobble_2.5s_infinite] inline-block sm:text-[1rem] 
+                                    md:text-[1.2rem] 
+                                    lg:text-[1.5rem] 
+                                    xl:text-[1.7rem]">To tisti</span> {/*Letra mexendo*/} 
+                                    Macacos me mordam eu sou louco </p> {/*Texto de cima*/}
+                                </div>
+                            <div className='m-8'> {/*texto do meio*/}
+                                <h1 className=' m-0 font-black tracking-widee capitalize  text-[3.2rem]
+                                               lg:text-[2.9rem] 
+                                               md:text-[2.6rem] 
+                                               sm:text-[2.3rem]'>Lorem 
+                                               <span className="text_span_green">ipsum dolor</span>
+                                                sit amet consectetur 
+                                               <span className="text_span_green"> adipisicing</span> 
+                                                elit.</h1>
+                            </div>
+                            <div><p className='m-0 font-bold lowercase text-[18px] leading-[30px] tracking-[0.04em] opacity-80 
+                            sm:text-[14px] 
+                            sm:leading-[21px] 
+                            md:text-[15px] 
+                            lg:text-[16px] 
+                            lg:leading-[26px] 
+                            xl:text-[18px] 
+                            xl:leading-[30px]'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus a reiciendis laudantium, labore sunt enim! Distinctio, dicta maxime voluptate earum odio esse velit sit, quaerat, eos voluptatem quam qui incidunt!</p></div>
+                             </div>
+                        <div className='w-[45%] pb-4
+                                        md:w-full md:flex md:justify-center md:items-center
+                                        sm:w-full sm:flex sm:justify-center sm:items-center sm:pb-8
+                                        max-sm:w-full max-sm:flex max-sm:justify-center max-sm:items-center max-sm:pb-12'>
+                                            <div className='profile'><img src={face} className='w-[700px] h-[700px]
+                                                                                                lg:w-[600px] lg:h-[600px]
+                                                                                                md:w-[400px] md:h-[400px]
+                                                                                                sm:w-[300px] sm:h-[300px]
+                                                                                                max-sm:w-[200px] max-sm:h-[200px] rounded-full'  />
+                                             </div>
+
+                        </div>
+                </div>            
+            <div></div>  
+            <div></div>  
+            <div></div>  
             </div>
-            <div class='m-8'> {/* Segundo Texto */}
-              <h1 class='font-black si tracking-wide m-0 capitalize text-5.5xl leading-12  font-spacefuture'><span class='text-[#14E956] text-6.5xl '>Bigas </span> Arumalaca kkkkk atumalca kkkkk atumaalacaka kkkkk</h1>
-              </div>
-            <div class='m-8'> {/* Terceiro texto */}
-              <p class='text-lg leading-8 font-bold tracking-widee font-spacefuture'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim porro cumque unde autem ipsum qui quam numquam totam assumenda reiciendis voluptatum nisi adipisci eligendi quod, impedit error ea nesciunt iusto!</p>
-            </div>
-          </div>
-          <div>  {/* Img do ladod o texto */}
-            <img src={atumalaca} class='w-[500px] h-[400px] animate-fade-left animate-once animate-ease-linear animate-normal animate-fill-backwards rounded-full ' />
-          </div >
 
-        </div>
-        <div class='items-center flex flex-col py-20'>
-          <div class='bg-[#12141d] rounded-[12px] p-[0.8rem] px-[2rem] flex justify-center items-center mb-[5rem] shadow-[0px_0px_4px_1px_rgba(20,233,86,1)]'>
-            <h2 class='uppercase font-[900] text-[#14E956] text-shadow-custom'>Atumalaca 4</h2>
 
-          </div>
+        
+        
+        
+        
+        
+        
+        
         </div>
-      </div>
-    </div>
-  )
-}
-export default Main;
+
+
+    )
+
+};
+
+    export default main;
