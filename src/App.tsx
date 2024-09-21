@@ -5,7 +5,7 @@ import Main from '../src/CSS/Main/main';
 const App = () => {
   return (
     <div className="App">
-      <Header />
+      {/*<Header />*/}
       <Main />
       {/*<Footer />*/}
     </div>

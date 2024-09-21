@@ -1,5 +1,6 @@
 import 'aos/dist/aos.css';
 import './style.scss'
+import '../principais.scss'
 
 
 const Header = () => {

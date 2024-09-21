@@ -13,7 +13,7 @@ export default {
         'custom-green': '#14E956',
       },
       fontFamily: {
-        spacefuture: ['spacefuture,'],
+        spacefuture: ['spacefuture,']
       },
       boxShadow: {
         custom: '3px 3px 0 #1F2127, -1px -1px 0 #1F2127, 1px -1px 0 #1F2127, -1px 1px 0 #1F2127, 1px 1px 0 #1F2127',
