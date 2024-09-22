@@ -1,6 +1,5 @@
-import Header from './CSS/Header/header';
+{/*import Header from './CSS/Header/header';*/}
 import Main from '../src/CSS/Main/main';
-{/*import Footer from './components/Footer';*/}
 
 const App = () => {
   return (
