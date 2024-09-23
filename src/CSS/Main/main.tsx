@@ -1,7 +1,5 @@
 import '../principais.scss'
-{/*import AOS from 'aos';*/}
 import 'aos/dist/aos.css';
-{/*import React, { useState, useEffect } from 'react'; */}
 import './style.scss'
 import face from '../../../public/img/1714930728994.jfif'
 import Projetos from './Projetos';

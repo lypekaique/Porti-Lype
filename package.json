@@ -16,7 +16,9 @@
     "react-slick": "^0.30.2",
     "react-stick": "^5.0.6",
     "slick-carousel": "^1.8.1",
-    "tailwindcss-animate": "^1.0.7"
+    "swiper": "^11.1.14",
+    "tailwindcss-animate": "^1.0.7",
+    "taos": "^1.0.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

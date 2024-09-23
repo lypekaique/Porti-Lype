@@ -39,13 +39,6 @@ export default {
   plugins: [
     require('tailwindcss-animated')
   ],
-    function ({ addUtilities }) {
-      const newUtilities = {
-        '.transform-none-important': {
-          transform: 'none !important',
-        },
-      }
-
-      addUtilities(newUtilities, ['responsive', 'hover'])
-    },
+    
+  
 }
