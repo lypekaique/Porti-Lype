@@ -2,15 +2,18 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import seta from "../../../public/img/109617.png"
 
 const projetos = () => {
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
-
+        autoplay: true, 
+        autoplaySpeed: 6000,
+        Infinity
       };
       
 
@@ -42,12 +45,23 @@ const projetos = () => {
    
                         <>
                         
-                        <div className="h-[51rem] w-100% flex justify-center items-center rounded-t-xl">
+                        <div className="relative h-[51rem] w-full flex justify-center items-center rounded-t-xl">
                             
                         <img src={d.img} className=" h-[35rem] w-[27rem] bg-cover bg-right rounded-[15px] flex-col 
                                                     md:h-[51rem] md:w-[24rem] sm:h-[27rem] sm:w-[19rem]  " />
-                    
-                        </div>
+
+                <div className="absolute top-3 left-2 text-white text-xl font-bold bg-black bg-opacity-40 w-3/5 text-center py-2.5 rounded-[25px]">
+                <p className="font-extrabold text-[1.2rem]
+                                sm:text-[1rem] sm:py-2 
+                                max-sm:text-[0.8rem] max-sm:py-1.5">Projeto: <span className="font-black text-[#14e956]">{d.name}</span></p>
+                </div>
+
+                    {/* Review na parte inferior da imagem */}
+                    <div className="h-[30%] absolute bottom-0 w-[100%]  flex flex-col justify-end bg-gradient-to-t from-[#0F5197] to-[rgba(255,255,255,0.0046612394957983305)] rounded-b-[15px]">
+                    </div>
+                    <div className="text-[1.8rem] absolute bottom-20 left-3 leading-[30px] flex flex-col justify-end font-extrabold">{d.review}</div>
+                    <div className="absolute flex flex-col justify-end right-0 bottom-0 "><button className=""  ><img src={seta} className="w-[20%]" /></button></div>
+                     </div>
                     
                     
                     
@@ -65,13 +79,13 @@ const projetos = () => {
 }
 const data =[
     {
-        name:`Projeto teste`,
+        name:`Movie App`,
         img: `/img/image.png`,
-        review:`lorem dalelde dasçldkaslçkdasçl?`,
+        review:`Projeto Para recriação de um aplicativo de filme`,
     },
     {
         name:`Projeto teste`,
-        img: `/img/atumalaca.gif`,
+        img: `/img/Screenshot_20240922-192557.png`,
         review:`lorem dalelde dasçldkaslçkdasçl?`,
     },
     {

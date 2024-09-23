@@ -17,7 +17,7 @@ const main = () => {
                                 sm:text-[1rem]
                                 xs:text-[0.85rem] xs:p-[0.27rem_0.7rem] xs:flex xs:items-center
                                 max-xs:text-[0.75rem] max-xs:p-[0.2rem_0.5rem] max-xs:flex max-xs:items-center">
-                                    <span className="font-spacefuture text-[1.7rem] animate-bounce animate-infinite inline-block sm:text-[1rem] 
+                                    <span className=" text-[1.7rem] animate-bounce animate-infinite inline-block sm:text-[1rem] 
                                     md:text-[1.2rem] 
                                     lg:text-[1.5rem] 
                                     xl:text-[1.7rem]">To tisti</span> {/*Letra mexendo*/} 
