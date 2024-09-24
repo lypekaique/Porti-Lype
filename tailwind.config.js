@@ -29,6 +29,9 @@ export default {
       letterSpacing: {
         'widee': '.04em'
       },
+      textShadow: {
+        'custom': '3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
+      }
 
 
 
@@ -37,7 +40,8 @@ export default {
     },
   },
   plugins: [
-    require('tailwindcss-animated')
+    require('tailwindcss-animated'),
+    require('tailwindcss-textshadow')
   ],
     
   

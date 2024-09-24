@@ -7,15 +7,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 94vh;
+        height: 74vh;
         background-image: linear-gradient(
         to right bottom,
         rgba(#050810, 0.6),
         rgba(#050810, 0.6)),
-    url('../../../public/img/wavey-fingerprint.svg');
+    url('./../../assets//images//index.svg');
     background-size: cover;
     background-position: top;
-    // position: relative;
         padding: 0 5rem;
         padding-top: 8rem;
         @media (min-width: 760px) and (max-width: 1024px) {
@@ -41,5 +40,4 @@
             text-align: center;
         }
     }
-};
-  
+}
