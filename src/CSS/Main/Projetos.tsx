@@ -61,12 +61,11 @@ const projetos = () => {
     
     return (
         <div>
-                <div className="flex justify-center items-center mt-10 bg-cover pt-8 w-full h-[60vh] text-center 
-                xl:p-0 xl:px-5
-                md:px-8 md:pt-48
-                sm:px-5 sm:pt-48">
+                <div className="flex justify-center items-center mt-10 bg-cover pt-4 w-full h-[50vh] text-center 
+                             .max-sm:h-[30vh} ">
                  {/* Titulo */}
-                    <div className="flex justify-center items-center w-full h-full">
+                    <div className="flex justify-center items-center w-full h-full
+                    ">
                         <div className="bg-[#12141d] rounded-lg px-8 py-1 shadow-[inset_0px_0px_4px_1px_rgba(20,233,86,1)] 
                                 xl:px-7 xl:py-2.5 
                                 lg:px-6 lg:py-2 
@@ -95,11 +94,11 @@ const projetos = () => {
                         <>
                         
                         <div className="relative h-[51rem] w-full flex justify-center items-center rounded-t-xl
-                         max-sm:h-[30rem]">
+                         max-sm:h-[40rem]">
                             
                         <img src={d.img} className=" h-[35rem] w-[27rem] bg-cover bg-right rounded-[15px] flex-col 
                                                     md:h-[51rem] md:w-[24rem] sm:h-[27rem] sm:w-[19rem]
-                                                    max-sm:h-[30rem]
+                                                    max-sm:h-[40rem]
                                                     max-sm:w-[full]  " />
 
                 <div className="absolute top-3 left-2 text-white text-xl font-bold bg-black bg-opacity-40text-center py-2.5 rounded-[25px]
@@ -110,17 +109,12 @@ const projetos = () => {
                 </div>
 
                     {/* Review na parte inferior da imagem */}
-                    <div className="h-[30%] absolute bottom-0 w-full flex flex-col justify-end bg-gradient-to-t from-[#0F5197] to-[rgba(255,255,255,0.0046)] rounded-b-[15px]">
-  {/* Contenido pode ser adicionado aqui, se necessário */}
-                              </div>
-
-                            <div className="absolute bottom-20 left-3 flex flex-col justify-end font-extrabold 
-                                                    text-[1.8rem] leading-[30px] 
-                                                    md:text-[1.6rem] md:bottom-16 md:leading-[28px] 
-                                                    sm:text-[1.4rem] sm:bottom-12 sm:leading-[26px] 
-                                                    ">
-  {d.review}
-</div>
+                    <div className="h-[30%] absolute bottom-0 w-[100%]  flex flex-col justify-end bg-gradient-to-t from-[#0F5197] to-[rgba(255,255,255,0.0046612394957983305)] rounded-b-[15px]">
+                    </div>
+                    <div className="absolute bottom-20 left-3 text-[1.8rem] leading-[30px] flex flex-col justify-end font-extrabold 
+                                    md:text-[1.6rem] md:bottom-16 md:leading-[28px] 
+                                    sm:text-[1.4rem] sm:bottom-12 sm:leading-[26px] 
+                      max-sm:text-[1.2rem] max-sm:bottom-8 max-sm:leading-[24px] ">{d.review}</div>
                     <div className="absolute flex flex-col justify-end right-0 bottom-0 "><button className=""  ><img src={seta} className="w-[20%]" /></button></div>
                      </div>
                     
@@ -147,12 +141,12 @@ const data =[
     {
         name:`Projeto teste`,
         img: `/img/Screenshot_20240922-192557.png`,
-        review:`Projeto Para recriação de um aplicativo de filme`,
+        review:`lorem dalelde dasçldkaslçkdasçl?`,
     },
     {
         name:`Projeto teste`,
         img: `/img/atumalaca.gif`,
-        review:`Projeto Para recriação de um aplicativo de filme`,
+        review:`lorem dalelde dasçldkaslçkdasçl?`,
     },
 
 ]
