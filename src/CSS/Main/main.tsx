@@ -13,11 +13,10 @@ const main = () => {
                         <div className=''> 
                             <div className='m-6 w-max '>  {/*Conteudo textos*/}
                             <p className="bg-[#14e95828] rounded-lg text-[#14E956] font-extrabold m-0 p-2.5 capitalize tracking-[0.05em]
-                                            md:text-[1.2rem] sm:text-[1rem] sm:p-[0.27rem_0.7rem] sm:flex sm:items-center
-                                            text-[0.85rem] flex items-center">
+                                            md:text-[1.2rem] sm:text-[1rem]">
   
-  <span className="animate-bounce inline-block 
-    md:text-[1.2rem] lg:text-[1.5rem] xl:text-[1.7rem] sm:text-[1rem]]">
+  <span className="animate-bounce inline-block
+    md:text-[1.2rem] lg:text-[1.5rem] xl:text-[1.7rem] sm:text-[1rem] max-sm:text-[0.9rem]">
     To tisti
   </span> {/* Letra mexendo */}
   
