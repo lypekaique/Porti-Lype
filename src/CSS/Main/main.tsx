@@ -12,18 +12,17 @@ const main = () => {
                 <div className="home-intro">{/*Primeira Paginaa*/}
                         <div className=''> 
                             <div className='m-6 w-max '>  {/*Conteudo textos*/}
-                                <p className="bg-[#14e95828] rounded-lg text-[#14E956]
-                                font-extrabold  m-0 p-2.5 capitalize tracking-[0.05em]
-                                md:text-[1.2rem]
-                                sm:text-[1rem]
-                                xs:text-[0.85rem] xs:p-[0.27rem_0.7rem] xs:flex xs:items-center
-                                max-xs:text-[0.75rem] max-xs:p-[0.2rem_0.5rem] max-xs:flex max-xs:items-center">
-                                    <span className=" 
-                                     animate-bounce animate-infinite inline-block sm:text-[rem] 
-                                    md:text-[1.2rem] 
-                                    lg:text-[1.5rem] 
-                                    xl:text-[1.7rem]">To tisti</span> {/*Letra mexendo*/} 
-                                    Macacos me mordam eu sou louco </p> {/*Texto de cima*/}
+                            <p className="bg-[#14e95828] rounded-lg text-[#14E956] font-extrabold m-0 p-2.5 capitalize tracking-[0.05em]
+                                            md:text-[1.2rem] sm:text-[1rem] sm:p-[0.27rem_0.7rem] sm:flex sm:items-center
+                                            text-[0.85rem] flex items-center">
+  
+  <span className="animate-bounce inline-block 
+    md:text-[1.2rem] lg:text-[1.5rem] xl:text-[1.7rem] sm:text-[1rem]]">
+    To tisti
+  </span> {/* Letra mexendo */}
+  
+  Macacos me mordam eu sou louco
+</p>{/*Texto de cima*/}
                                 </div>
                             <div className='m-8 '> {/*texto do meio*/}
                                 <h1 className=' m-0 font-black tracking-widee capitalize  
