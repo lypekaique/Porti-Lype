@@ -1,3 +1,5 @@
+import React, { useRef } from "react";
+
 const settings = {
     dots: true,
     infinite: true,
@@ -75,7 +77,7 @@ const settings = {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay: true, 
-                autoplaySpeed: 6000,
+                autoplaySpeed: 2000,
                 adaptiveHeight: true,
               },
             },
@@ -89,7 +91,7 @@ const settings = {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay: true, 
-                autoplaySpeed: 6000,
+                autoplaySpeed: 2000,
                 adaptiveHeight: true,
                 arrows: false
               },
@@ -104,7 +106,7 @@ const settings = {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay: true, 
-                autoplaySpeed: 6000,
+                autoplaySpeed: 2000,
                 adaptiveHeight: true,
                 arrows: false
               },
@@ -113,4 +115,4 @@ const settings = {
 
   };
 
-  export { settings, settings2 };
+  export { settings, settings2};

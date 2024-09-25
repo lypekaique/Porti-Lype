@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import seta from "../../../public/img/right-chevron.png"
 import { settings, settings2 } from './config';
 
+
+
 const projetos = () => {
     
     
@@ -37,20 +39,25 @@ const projetos = () => {
       <div className="mt-20">
         <Slider {...settings}>
           {data.map((d, index) => (
-            <div key={index} className="relative h-[51rem] w-[27rem]">
+            <div key={index} className="relative h-auto w-[27rem] group">
               {/* Verifica se o d.images existe e é um array antes de renderizar o slider interno */}
               {d.images && Array.isArray(d.images) && (
                 <Slider {...settings2}>
                   {d.images.map((img, idx) => (
-                    <div key={idx} className="h-[51rem] w-[27rem]">
+                    <div key={idx} className=" w-[27rem] relative">
                       <img
                         src={img}
-                        className=" bg-cover bg-right rounded-[15px] 
-                                   md:h-[51rem] md:w-[24rem] 
-                                   sm:h-[51rem] sm:w-[19rem] 
-                                   max-sm:h-[40rem] max-sm:w-full"
-                      />
-                    </div>
+                        className="bg-cover bg-right rounded-[15px] 
+                                    md:w-[24rem] 
+                                    sm:w-[19rem] 
+                                    max-sm:w-full"/>
+                                    
+                      <div className="absolute inset-0 bg-black bg-opacity-75 text-white p-4 flex flex-col justify-center items-center rounded-[15px]
+                           opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                            <p className="text-sm mt-2">{d.review}</p>
+                            <button className="mt-4"><img src={seta} className="w-10 animate-shake animate-infinite animate-duration-[5000ms] animate-delay-1000"/></button>
+                       </div>
+              </div>
                   ))}
                 </Slider>
               )}
@@ -61,7 +68,13 @@ const projetos = () => {
                                   max-sm:text-[0.8rem] max-sm:py-1.5">Projeto: <span className="font-black text-[#14e956]">{d.name}</span></p>
                     </div>
 
-                    {/* Review na parte inferior da imagem */}
+                    <div className="absolute top-3 left-2 text-white text-xl w-[65%] font-bold bg-black bg-opacity-65 text-center py-2.5 rounded-[25px]">
+    <p className="font-extrabold text-[1.2rem]
+                  sm:text-[1rem] sm:py-2 
+                  max-sm:text-[0.8rem] max-sm:py-1.5">
+      Projeto: <span className="font-black text-[#14e956]">{d.name}</span> {/*informações que aparece ao passar o mouse */}
+    </p>
+                  </div>
                   </div>
                      
                     
@@ -87,12 +100,12 @@ const data =[
     },
     {
         name:`Projeto teste`,
-        img: `["/img/image1.png", "/img/image2.png", "/img/image3.png"]`,
+        images: ["/img/image3.png", "/img/image4.png", "/img/image5.png"],
         review:`lorem dalelde dasçldkaslçkdasçl?`,
     },
     {
         name:`Projeto teste`,
-        img: `["/img/image1.png", "/img/image2.png", "/img/image3.png"]`,
+        images: ["/img/image6.png", "/img/image7.png", "/img/image8.png"],
         review:`lorem dalelde dasçldkaslçkdasçl?`,
     },
 

@@ -19,9 +19,9 @@ const main = () => {
   <span className="animate-bounce inline-block
     md:text-[1.2rem] lg:text-[1.5rem] xl:text-[1.7rem] sm:text-[1rem] max-sm:text-[0.9rem]">
     To tisti
-                            </span> {/* Letra mexendo */}
+  </span> {/* Letra mexendo */}
   
-                                    Macacos me mordam eu sou louco
+  Macacos me mordam eu sou louco
 </p>{/*Texto de cima*/}
                                 </div>
                             <div className='m-8 '> {/*texto do meio*/}
