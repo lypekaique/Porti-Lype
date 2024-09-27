@@ -2,8 +2,40 @@ import "../principais.scss";
 import "./style.scss";
 import face from "../../../public/img/1714930728994.jfif";
 import Projetos from "./Projetos";
+import React, { useState, useEffect, useRef } from "react";
 
-function main() {
+const Main: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false); // Estado para controlar a visibilidade
+  const elementRef = useRef<HTMLDivElement | null>(null); // Referência ao elemento
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Se o elemento estiver visível na viewport
+            setIsVisible(true);
+          } else {
+            // Se o elemento não estiver mais visível
+            setIsVisible(false);
+          }
+        });
+      },
+      {
+        threshold: 0.5, // Define a porcentagem do elemento visível para acionar o observer (50%)
+      }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current); // Observa o elemento
+    }
+
+    return () => {
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current); // Limpa o observer quando o componente desmontar
+      }
+    };
+  }, []);
   return (
     <div className="main">
       <div className="home">
@@ -11,13 +43,20 @@ function main() {
         {/*Main*/}
         <div className="home-intro">
           {/*Primeira Paginaa*/}
-          <div className="">
+          <div
+            ref={elementRef}
+            className={`transform transition-opacity duration-700 ${
+              isVisible
+                ? "opacity-100 animate-fade-right animate-once animate-duration-[1500ms] animate-ease-out animate-normal"
+                : "opacity-0"
+            }`}
+          >
             <div className="m-6 w-max ">
               {" "}
               {/*Conteudo textos*/}
               <p
                 className="bg-[#14e95828] rounded-lg text-[#14E956] font-extrabold m-0 p-2.5 capitalize tracking-[0.05em]
-                                            md:text-[1.2rem] sm:text-[1rem]"
+                                            md:text-[1.2rem] sm:text-[1rem] animate-bounce "
               >
                 <span
                   className="animate-bounce inline-block
@@ -67,10 +106,10 @@ function main() {
             {/*texto de baixo*/}
           </div>
           <div
-            className="w-[45%] pb-4 animate-fade-left animate-duration-1000 animate-ease-in-out animate-fill-forwards
+            className="w-[45%] pb-4 
                                         md:w-full md:flex md:justify-center md:items-center
                                         sm:w-full sm:flex sm:justify-center sm:items-center sm:pb-8
-                                        max-sm:w-full max-sm:flex max-sm:justify-center max-sm:items-center max-sm:pb-12"
+                                        max-sm:w-full max-sm:flex max-sm:justify-center max-sm:items-center max-sm:pb-12 overflow-hidden "
           >
             <div className="profile">
               <img
@@ -80,7 +119,7 @@ function main() {
                                                                                                 lg:w-[400px] lg:h-[400px]
                                                                                                 md:w-[400px] md:h-[400px]
                                                                                                 sm:w-[300px] sm:h-[300px]
-                                                                                                max-sm:w-[200px] max-sm:h-[200px] rounded-full"
+                                                                                                max-sm:w-[200px] max-sm:h-[200px] rounded-full "
               />
             </div>
           </div>
@@ -93,6 +132,6 @@ function main() {
       <div></div>
     </div>
   );
-}
+};
 
-export default main;
+export default Main;

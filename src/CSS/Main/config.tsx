@@ -1,5 +1,3 @@
-import React, { useRef } from "react";
-
 const settings = {
     dots: true,
     infinite: true,
