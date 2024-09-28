@@ -1,6 +1,6 @@
 const redes = () => {
   return (
-    <div className="flex flex-col justify-start items-start w-full p-0 mt-10">
+    <div >
       <div
         className="flex justify-center items-center mt-10 bg-cover pt-4 w-full h-[50vh] text-center 
                              .max-sm:h-[30vh} "
@@ -19,7 +19,7 @@ const redes = () => {
                                 max-sm:px-3"
           >
             <h2
-              className="uppercase font-normal text-[#14E956] text-shadow-custom
+              className="uppercase font-semibold text-[#14E956] text-shadow-custom
                                                 xl:text-5xl 
                                                 lg:text-[2.5rem] 
                                                 md:text-[2.2rem] 
@@ -32,12 +32,9 @@ const redes = () => {
         </div>
       </div>
       <div
-        className="items-center flex justify-between w-full
-                    lg:justify-center lg:flex-wrap  
-                    md:justify-center md:flex-wrap 
-                    sm:justify-center sm:flex-wrap
-                    max-sm:justify-center max-sm:flex-wrap"
-      >
+        className="items-center flex justify-between w-full 
+                    max-md:justify-center max-md:flex-wrap 
+                    max-sm:justify-center max-sm:flex-wrap">
         <a
           href=""
           className="w-[25%] bg-[#333333] text-white h-[9rem] py-0 px-6 flex justify-between items-center cursor-pointer relative hover:bg-slate-800"
@@ -119,7 +116,9 @@ const redes = () => {
       <a
         href=""
         className="flex justify-center items-center w-full h-16 bg-[#10ba46] cursor-pointer hover:bg-slate-800"
-      ></a>
+      >
+        <p>Envie Um email para mim</p>
+      </a>
     </div>
   );
 };

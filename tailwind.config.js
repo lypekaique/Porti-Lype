@@ -30,12 +30,15 @@ export default {
       textShadow: {
         custom:
           "3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
+        screens: {
+          "inverse-xs": { max: "475px" }, // <= 475px
+          "inverse-sm": { max: "640px" }, // <= 640px
+          "inverse-md": { max: "768px" }, // <= 768px
+          "inverse-lg": { max: "1024px" }, // <= 1024px
+          "inverse-xl": { max: "1280px" },
+        },
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animated"),
-    require("tailwindcss-textshadow"),
-
-  ],
+  plugins: [require("tailwindcss-animated"), require("tailwindcss-textshadow")],
 };

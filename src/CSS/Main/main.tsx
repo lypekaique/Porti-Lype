@@ -2,40 +2,11 @@ import "../principais.scss";
 import "./style.scss";
 import face from "../../../public/img/1714930728994.jfif";
 import Projetos from "./Projetos";
-import React, { useState, useEffect, useRef } from "react";
+import { useIntersectionObserver } from "../inview"
 
 const Main: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false); // Estado para controlar a visibilidade
-  const elementRef = useRef<HTMLDivElement | null>(null); // Referência ao elemento
+  const { isVisible, elementRef } = useIntersectionObserver(0.5); // Usando o hook com threshold de 50%
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Se o elemento estiver visível na viewport
-            setIsVisible(true);
-          } else {
-            // Se o elemento não estiver mais visível
-            setIsVisible(false);
-          }
-        });
-      },
-      {
-        threshold: 0.5, // Define a porcentagem do elemento visível para acionar o observer (50%)
-      }
-    );
-
-    if (elementRef.current) {
-      observer.observe(elementRef.current); // Observa o elemento
-    }
-
-    return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current); // Limpa o observer quando o componente desmontar
-      }
-    };
-  }, []);
   return (
     <div className="main">
       <div className="home">
@@ -111,7 +82,14 @@ const Main: React.FC = () => {
                                         sm:w-full sm:flex sm:justify-center sm:items-center sm:pb-8
                                         max-sm:w-full max-sm:flex max-sm:justify-center max-sm:items-center max-sm:pb-12 overflow-hidden "
           >
-            <div className="profile">
+            <div
+              ref={elementRef}
+              className={`transform transition-opacity duration-700 ${
+                isVisible
+                  ? "opacity-100 animate-fade-left animate-once animate-duration-[1500ms] animate-ease-out animate-normal"
+                  : "opacity-0"
+              }`}
+            >
               <img
                 src={face}
                 className="

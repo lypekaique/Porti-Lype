@@ -2,27 +2,27 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import seta from "../../../public/img/right-chevron.png";
-import { settings, settings2 } from "./config";
+import { settings, settings2 } from "../config";
+import { useIntersectionObserver } from "../inview";
 
-const projetos = () => {
+const Projetos: React.FC = () => {
+  const { isVisible, elementRef } = useIntersectionObserver(0.5);
+  
   return (
     <div>
-      <div
-        className="flex justify-center items-center mt-10 bg-cover pt-4 w-full h-[50vh] text-center 
-                             .max-sm:h-[30vh} "
-      >
+      <div className="flex justify-center items-center mt-10 bg-cover pt-4 w-full h-[52vh] text-center max-sm:h-[30vh] ">
         {/* Titulo */}
         <div
           className="flex justify-center items-center w-full h-full
                     "
         >
           <div
-            className="bg-[#12141d] rounded-lg px-8 py-1 shadow-[inset_0px_0px_4px_1px_rgba(20,233,86,1)] 
-                                xl:px-7 xl:py-2.5 
-                                lg:px-6 lg:py-2 
-                                md:px-5 md:py-1.5 
-                                sm:px-4 sm:py-1
-                                max-sm:px-3"
+            ref={elementRef}
+            className={`transform transition-opacity duration-700 ${
+              isVisible
+                ? "opacity-100 animate-fade-down animate-once animate-duration-[1000ms] animate-ease-linear animate-normal animate-fill-forwards bg-[#12141d] rounded-lg px-8 py-1 shadow-[inset_0px_0px_4px_1px_rgba(20,233,86,1)] xl:px-7 xl:py-2.5 lg:px-6 lg:py-2 md:px-5 md:py-1.5 sm:px-4 sm:py-1 max-sm:px-3 "
+                : "opacity-0"
+            }`}
           >
             <h2
               className="uppercase font-semibold text-[#14E956] text-shadow-custom
@@ -39,7 +39,14 @@ const projetos = () => {
       </div>
 
       <div className="w-[46%] h-[7%] m-auto max-sm:w-[80%]">
-        <div className="mt-20">
+        <div
+          ref={elementRef}
+          className={`transform transition-opacity duration-900 ${
+            isVisible
+              ? "opacity-100 mt-20 animate-jump-in animate-once animate-duration-1000 animate-ease-in-out"
+              : "opacity-0"
+          }`}
+        >
           <Slider {...settings}>
             {data.map((d, index) => (
               <div key={index} className="relative h-auto w-[27rem] group">
@@ -121,4 +128,4 @@ const data = [
   },
 ];
 
-export default projetos;
+export default Projetos;
