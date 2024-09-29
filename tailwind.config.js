@@ -36,6 +36,7 @@ export default {
           "inverse-md": { max: "768px" }, // <= 768px
           "inverse-lg": { max: "1024px" }, // <= 1024px
           "inverse-xl": { max: "1280px" },
+           "xs": '479px',
         },
       },
       spacing: {

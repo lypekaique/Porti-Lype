@@ -7,23 +7,20 @@ import { useIntersectionObserver } from "../inview";
 
 const Projetos: React.FC = () => {
   const { isVisible, elementRef } = useIntersectionObserver(0.5);
-  
+
   return (
     <div>
-      <div className="flex justify-center items-center mt-10 bg-cover pt-4 w-full h-[52vh] text-center max-sm:h-[30vh] ">
+      <div className="flex justify-center items-center mt-10 bg-cover pt-4 w-full h-[65vh] text-center ">
         {/* Titulo */}
         <div
-          className="flex justify-center items-center w-full h-full
-                    "
+          ref={elementRef}
+          className={`transform transition-opacity duration-700 ${
+            isVisible
+              ? "opacity-100 animate-fade-down animate-once animate-duration-[700ms]  flex justify-center items-center w-full h-full  "
+              : "opacity-0"
+          }`}
         >
-          <div
-            ref={elementRef}
-            className={`transform transition-opacity duration-700 ${
-              isVisible
-                ? "opacity-100 animate-fade-down animate-once animate-duration-[1000ms] animate-ease-linear animate-normal animate-fill-forwards bg-[#12141d] rounded-lg px-8 py-1 shadow-[inset_0px_0px_4px_1px_rgba(20,233,86,1)] xl:px-7 xl:py-2.5 lg:px-6 lg:py-2 md:px-5 md:py-1.5 sm:px-4 sm:py-1 max-sm:px-3 "
-                : "opacity-0"
-            }`}
-          >
+          <div className=" bg-[#12141d] rounded-lg px-8 py-1 shadow-[inset_0px_0px_4px_1px_rgba(20,233,86,1)] xl:px-7 xl:py-2.5 lg:px-6 lg:py-2 md:px-5 md:py-1.5 sm:px-4 sm:py-1 max-sm:px-3">
             <h2
               className="uppercase font-semibold text-[#14E956] text-shadow-custom
                                                 xl:text-5xl 
@@ -39,73 +36,64 @@ const Projetos: React.FC = () => {
       </div>
 
       <div className="w-[46%] h-[7%] m-auto max-sm:w-[80%]">
-        <div
-          ref={elementRef}
-          className={`transform transition-opacity duration-900 ${
-            isVisible
-              ? "opacity-100 mt-20 animate-jump-in animate-once animate-duration-1000 animate-ease-in-out"
-              : "opacity-0"
-          }`}
-        >
-          <Slider {...settings}>
-            {data.map((d, index) => (
-              <div key={index} className="relative h-auto w-[27rem] group">
-                {/* Verifica se o d.images existe e é um array antes de renderizar o slider interno */}
-                {d.images && Array.isArray(d.images) && (
-                  <Slider {...settings2}>
-                    {d.images.map((img, idx) => (
-                      <div key={idx} className=" w-[27rem] relative">
-                        <img
-                          src={img}
-                          className="bg-cover bg-right rounded-[15px] 
+        <Slider {...settings}>
+          {data.map((d, index) => (
+            <div key={index} className="relative h-auto w-[27rem] group">
+
+              {d.images && Array.isArray(d.images) && (
+                <Slider {...settings2}>
+                  {d.images.map((img, idx) => (
+                    <div key={idx} className=" w-[27rem] relative ">
+                      <img
+                        src={img}
+                        className="bg-cover bg-right rounded-[15px] 
                                     md:w-[24rem] 
                                     sm:w-[19rem] 
                                     max-sm:w-full"
-                        />
+                      />
 
-                        <div
-                          className="absolute inset-0 bg-black bg-opacity-75 text-white p-4 flex flex-col justify-center items-center rounded-[15px]
+                      <div
+                        className="absolute inset-0 bg-black bg-opacity-75 text-white p-4 flex flex-col justify-center items-center rounded-[15px]
                            opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
-                        >
-                          <p className="text-sm mt-2">{d.review}</p>
-                          <button className="mt-4">
-                            <img
-                              src={seta}
-                              className="w-10 animate-shake animate-infinite animate-duration-[5000ms] animate-delay-1000"
-                            />
-                          </button>
-                        </div>
+                      >
+                        <p className="text-sm mt-2">{d.review}</p>
+                        <button className="mt-4">
+                          <img
+                            src={seta}
+                            className="w-10 animate-shake animate-infinite animate-duration-[5000ms] animate-delay-1000"
+                          />
+                        </button>
                       </div>
-                    ))}
-                  </Slider>
-                )}
+                    </div>
+                  ))}
+                </Slider>
+              )}
 
-                <div className="absolute top-3 left-2 text-white text-xl w-[65%] font-bold bg-black bg-opacity-65 text-center py-2.5 rounded-[25px]">
-                  <p
-                    className="font-extrabold text-[1.2rem]
+              <div className="absolute top-3 left-2 text-white text-xl w-[65%] font-bold bg-black bg-opacity-65 text-center py-2.5 rounded-[25px]">
+                <p
+                  className="font-extrabold text-[1.2rem]
                                   sm:text-[1rem] sm:py-2 
                                   max-sm:text-[0.8rem] max-sm:py-1.5"
-                  >
-                    Projeto:{" "}
-                    <span className="font-black text-[#14e956]">{d.name}</span>
-                  </p>
-                </div>
+                >
+                  Projeto:{" "}
+                  <span className="font-black text-[#14e956]">{d.name}</span>
+                </p>
+              </div>
 
-                <div className="absolute top-3 left-2 text-white text-xl w-[65%] font-bold bg-black bg-opacity-65 text-center py-2.5 rounded-[25px]">
-                  <p
-                    className="font-extrabold text-[1.2rem]
+              <div className="absolute top-3 left-2 text-white text-xl w-[65%] font-bold bg-black bg-opacity-65 text-center py-2.5 rounded-[25px]">
+                <p
+                  className="font-extrabold text-[1.2rem]
                   sm:text-[1rem] sm:py-2 
                   max-sm:text-[0.8rem] max-sm:py-1.5"
-                  >
-                    Projeto:{" "}
-                    <span className="font-black text-[#14e956]">{d.name}</span>{" "}
-                    {/*informações que aparece ao passar o mouse */}
-                  </p>
-                </div>
+                >
+                  Projeto:{" "}
+                  <span className="font-black text-[#14e956]">{d.name}</span>{" "}
+                  {/*informações que aparece ao passar o mouse */}
+                </p>
               </div>
-            ))}
-          </Slider>
-        </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );
