@@ -6,21 +6,21 @@ import { settings, settings2 } from "../config";
 import { useIntersectionObserver } from "../inview";
 
 const Projetos: React.FC = () => {
-  const { isVisible, elementRef } = useIntersectionObserver(0.5);
+  const { isVisible, elementRef } = useIntersectionObserver(0);
 
   return (
     <div>
-      <div className="flex justify-center items-center mt-10 bg-cover pt-4 w-full h-[65vh] text-center ">
+      <div className="flex justify-center items-center mt-10 bg-cover pt-4 w-full h-[65vh] text-center max-sm:h-[25vh] ">
         {/* Titulo */}
         <div
           ref={elementRef}
           className={`transform transition-opacity duration-700 ${
             isVisible
-              ? "opacity-100 animate-fade-down animate-once animate-duration-[700ms]  flex justify-center items-center w-full h-full  "
+              ? "opacity-100 animate-fade-down animate-once animate-duration-[2700ms]  flex justify-center items-center w-full h-full  "
               : "opacity-0"
           }`}
         >
-          <div className=" bg-[#12141d] rounded-lg px-8 py-1 shadow-[inset_0px_0px_4px_1px_rgba(20,233,86,1)] xl:px-7 xl:py-2.5 lg:px-6 lg:py-2 md:px-5 md:py-1.5 sm:px-4 sm:py-1 max-sm:px-3">
+          <div className=" bg-[#12141d] rounded-lg px-8 py-1 shadow-[inset_0px_0px_4px_1px_rgba(20,233,86,1)] xl:px-7 xl:py-2.5 lg:px-6 lg:py-2 md:px-5 md:py-1.5 sm:px-4 sm:py-1 max-sm:px-1">
             <h2
               className="uppercase font-semibold text-[#14E956] text-shadow-custom
                                                 xl:text-5xl 
@@ -35,11 +35,17 @@ const Projetos: React.FC = () => {
         </div>
       </div>
 
-      <div className="w-[46%] h-[7%] m-auto max-sm:w-[80%]">
+      <div
+        ref={elementRef}
+        className={`transform transition-opacity duration-700 ${
+          isVisible
+            ? "opacity-100 animate-fade-up  w-[46%] h-[7%] m-auto max-sm:w-[80%]  "
+            : "opacity-0"
+        }`}
+      >
         <Slider {...settings}>
           {data.map((d, index) => (
             <div key={index} className="relative h-auto w-[27rem] group">
-
               {d.images && Array.isArray(d.images) && (
                 <Slider {...settings2}>
                   {d.images.map((img, idx) => (

@@ -4,7 +4,7 @@ import face from "../../../public/img/1714930728994.jfif";
 import { useIntersectionObserver } from "../inview";
 
 const Main: React.FC = () => {
-  const { isVisible, elementRef } = useIntersectionObserver(0.5); // Usando o hook com threshold de 50%
+  const { isVisible, elementRef } = useIntersectionObserver(0); // Usando o hook com threshold de 50%
 
   return (
     <div className="main">
@@ -35,7 +35,7 @@ const Main: React.FC = () => {
                   I
                 </span>{" "}
                 {/* Letra mexendo */}
-                Macacos me mordam eu sou louco
+                 Macacos me mordam eu sou louco
               </p>
             </div>
             {/*Texto de cima*/}

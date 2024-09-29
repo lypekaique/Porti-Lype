@@ -3,7 +3,7 @@ const redes = () => {
     <div>
       <div
         className="flex justify-center items-center mt-10 bg-cover pt-4 w-full h-[50vh] text-center 
-                             .max-sm:h-[30vh} "
+                             max-sm:h-[25vh] "
       >
         {/* Titulo */}
         <div
