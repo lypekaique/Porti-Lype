@@ -19,7 +19,7 @@ const Main: React.FC = () => {
             className={`transform transition-opacity duration-700 ${
               isVisible
                 ? "opacity-100 animate-fade-right animate-once animate-duration-[1500ms] animate-ease-out animate-normal m-6 w-full md:flex md:flex-col md:items-start md:p-0 sm:flex sm:flex-col sm:items-start sm:p-0 sm:m-8"
-                : "opacity-100"
+                : "opacity-0"
             }`}
           >
             <div className="m-0">
