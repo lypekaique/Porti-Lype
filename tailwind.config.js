@@ -38,6 +38,9 @@ export default {
           "inverse-xl": { max: "1280px" },
         },
       },
+      spacing: {
+        "3rem": "3rem",
+      },
     },
   },
   plugins: [require("tailwindcss-animated"), require("tailwindcss-textshadow")],

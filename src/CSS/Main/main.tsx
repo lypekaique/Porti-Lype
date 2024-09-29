@@ -80,7 +80,7 @@ const Main: React.FC = () => {
             className="w-[45%] pb-4 
                                         md:w-full md:flex md:justify-center md:items-center
                                         sm:w-full sm:flex sm:justify-center sm:items-center sm:pb-8
-                                        max-sm:w-full max-sm:flex max-sm:justify-center max-sm:items-center max-sm:pb-12 overflow-hidden "
+                                        max-sm:w-full max-sm:flex max-sm:justify-center max-sm:items-center max-sm:pb-12  "
           >
             <div
               ref={elementRef}
