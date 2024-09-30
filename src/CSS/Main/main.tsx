@@ -31,11 +31,9 @@ const Main: React.FC = () => {
                 <span
                   className="animate-bounce inline-block
     md:text-[1.2rem] lg:text-[1.5rem] xl:text-[1.7rem] sm:text-[1rem] max-sm:text-[0.9rem]"
-                >
-                  I
-                </span>{" "}
+                ></span>{" "}
                 {/* Letra mexendo */}
-                 Macacos me mordam eu sou louco
+                Meu nome é Douglas Multima
               </p>
             </div>
             {/*Texto de cima*/}
@@ -48,7 +46,7 @@ const Main: React.FC = () => {
                                                md:text-[2.6rem] 
                                                max-sm:text-[1.5rem]"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eu sou um desenvolvedor de aplicativos mobile.
               </h1>
             </div>
             <div>
@@ -56,10 +54,11 @@ const Main: React.FC = () => {
                 className="m-2 font-bold lowercase text-[18px] leading-[30px] tracking-[0.04em] opacity-80 
 md:text-[15px] sm:text-[14px] sm:leading-[21px] max-sm:text-[13px] max-sm:leading-[20px]"
               >
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Delectus a reiciendis laudantium, labore sunt enim! Distinctio,
-                dicta maxime voluptate earum odio esse velit sit, quaerat, eos
-                voluptatem quam qui incidunt!
+                tenho experiência completa no processo de criação e
+                desenvolvimento, desde a concepção do layout até a implementação
+                do código. Trabalho com bancos de dados Firebase, APIs e
+                arquiteturas modernas, e já lancei meu próprio aplicativo na
+                Play Store, onde qualquer pessoa pode acessá-lo.
               </p>
             </div>{" "}
           </div>

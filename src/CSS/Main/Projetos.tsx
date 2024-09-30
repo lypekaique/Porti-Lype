@@ -62,13 +62,14 @@ const Projetos: React.FC = () => {
                         className="absolute inset-0 bg-black bg-opacity-75 text-white p-4 flex flex-col justify-center items-center rounded-[15px]
                            opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
                       >
-                        <p className="text-sm mt-2">{d.review}</p>
-                        <button className="mt-4">
+                        <p className="text-center text-xl p-4 mt-2">{d.review}</p>
+
+                        <a href="https://github.com/DouglasMultima/Movie-Streaming">
                           <img
                             src={seta}
-                            className="w-10 animate-shake animate-infinite animate-duration-[5000ms] animate-delay-1000"
+                            className="w-10 animate-shake animate-infinite animate-duration-[5000ms] animate-delay-1000 m-2"
                           />
-                        </button>
+                        </a>
                       </div>
                     </div>
                   ))}

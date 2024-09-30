@@ -33,7 +33,8 @@ const redes = () => {
       </div>
       <div className="items-center flex justify-between w-full max-md:justify-center max-md:flex-wrap max-sm:justify-center max-sm:flex-wrap">
         <a
-          href=""
+          target="_blank"
+          href="https://github.com/DouglasMultima t"
           className="w-[25%] bg-[#333333] text-white h-[9rem] py-0 px-6 flex justify-between items-center cursor-pointer relative hover:bg-slate-800 
           max-sm:w-full max-sm:px-12 max-sm:justify-between max-sm:h-[4.5rem]"
         >
@@ -59,7 +60,7 @@ const redes = () => {
           </svg>
         </a>
         <a
-          href=""
+          href="https://www.linkedin.com/in/douglas-multima"
           className="w-[25%] bg-[#0077b5] text-white h-[9rem] py-0 px-6 flex justify-between items-center cursor-pointer relative hover:bg-slate-800
           max-sm:w-full max-sm:px-12 max-sm:justify-between max-sm:h-[4.5rem]"
         >
@@ -130,7 +131,8 @@ const redes = () => {
         </a>
       </div>
       <a
-        href=""
+        target="_blank"
+        href="mailto:douglasmultima0@gmail.com"
         className="flex justify-center items-center w-full h-16 bg-[#10ba46] cursor-pointer hover:bg-slate-800"
       >
         <p className="m-0 mb-[-0.3rem] text-[2.2rem] font-extrabold text-[#d0fbdd] uppercase">
