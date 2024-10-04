@@ -2,6 +2,7 @@ import "../principais.scss";
 import "./style.scss";
 import face from "../../../public/img/1714930728994.jfif";
 import { useIntersectionObserver } from "../inview";
+import "../index.scss"
 
 const Main: React.FC = () => {
   const { isVisible, elementRef } = useIntersectionObserver(0); // Usando o hook com threshold de 50%
@@ -18,7 +19,7 @@ const Main: React.FC = () => {
             ref={elementRef}
             className={`transform transition-opacity duration-700 ${
               isVisible
-                ? "opacity-100 animate-fade-right animate-once animate-duration-[1500ms] animate-ease-out animate-normal m-6 w-full md:flex md:flex-col md:items-start md:p-0 sm:flex sm:flex-col sm:items-start sm:p-0 sm:m-8"
+                ? "opacity-100 animate-fade-right animate-once animate-duration-[1500ms]  animate-ease-out animate-normal m-6 w-full md:flex md:flex-col md:items-start md:p-0 sm:flex sm:flex-col sm:items-start sm:p-0 sm:m-8 "
                 : "opacity-0"
             }`}
           >
@@ -26,11 +27,11 @@ const Main: React.FC = () => {
               {/*Conteudo textos*/}
               <p
                 className=" rounded-lg text-[#14E956] font-extrabold m-0 p-2.5 capitalize tracking-[0.05em]
-              text-[1.2rem] md:text-[1rem] sm:text-[.85rem] sm:px-[.7rem] sm:py-[.27rem] sm:flex sm:items-center xs:text-[.75rem] xs:px-[.5rem] xs:py-[.2rem] xs:flex xs:items-center "
+              text-[1.2rem]  sm:px-[.7rem] sm:py-[.27rem] sm:flex sm:items-center xs:text-[.75rem] xs:px-[.5rem] xs:py-[.2rem] xs:flex xs:items-center "
               >
                 <span
                   className="animate-bounce inline-block
-    md:text-[1.2rem] lg:text-[1.5rem] xl:text-[1.7rem] sm:text-[1rem] max-sm:text-[0.9rem]"
+    md:text-[1.2rem] lg:text-[1.5rem] xl:text-[1.7rem] sm:text-[1.5rem] max-sm:text-[1rem]"
                 ></span>{" "}
                 {/* Letra mexendo */}
                 Meu nome é Douglas Multima
@@ -43,6 +44,7 @@ const Main: React.FC = () => {
               <h1
                 className=" m-2 font-black tracking-widee capitalize  
                                                lg:text-[2.9rem] 
+                                               sm:text-[2.6rem]
                                                md:text-[2.6rem] 
                                                max-sm:text-[1.5rem]"
               >
@@ -51,8 +53,7 @@ const Main: React.FC = () => {
             </div>
             <div>
               <p
-                className="m-2 font-bold lowercase text-[18px] leading-[30px] tracking-[0.04em] opacity-80 
-md:text-[15px] sm:text-[14px] sm:leading-[21px] max-sm:text-[13px] max-sm:leading-[20px]"
+                className="m-2 font-bold lowercase text-[18px] leading-[30px] tracking-[0.04em] opacity-80  sm:text-[20px] sm:leading-[21px] max-sm:text-[13px]"
               >
                 tenho experiência completa no processo de criação e
                 desenvolvimento, desde a concepção do layout até a implementação
@@ -80,11 +81,9 @@ md:text-[15px] sm:text-[14px] sm:leading-[21px] max-sm:text-[13px] max-sm:leadin
               <img
                 src={face}
                 className="
-                          xl:w-[600px] xl:h-[600px]
-                          lg:w-[400px] lg:h-[400px]
-                          md:w-[400px] md:h-[400px]
-                          sm:w-[300px] sm:h-[300px]
-                          max-sm:w-[180px] max-sm:h-[180px] rounded-full "
+                          xl:w-[500px] xl:h-[500px]
+                          sm:w-[480px] sm:h-[480px]
+                          max-sm:w-[380px] max-sm:h-[380px] rounded-full "
               />
             </div>
           </div>
@@ -95,3 +94,5 @@ md:text-[15px] sm:text-[14px] sm:leading-[21px] max-sm:text-[13px] max-sm:leadin
 };
 
 export default Main;
+
+

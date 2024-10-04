@@ -1,8 +1,9 @@
 .home {
-    max-width: 100% !important;
+    max-width: 100vw !important;
     width: 100%;
     margin: 0;
-    overflow: hidden !important;
+    overflow-x: hidden !important;
+    padding: 0;
     .home-intro {
         display: flex;
         justify-content: space-between;
@@ -15,8 +16,10 @@
     url('../../../public/img/wavey-fingerprint.svg');
     background-size: cover;
     background-position: top;
-        padding: 0 5rem;
-        padding-top: 8rem;
+    padding: 0 5rem;
+    padding-top: 8rem;
+    
+
         @media (min-width: 760px) and (max-width: 1024px) {
             flex-direction: column;
             height: 100vh;
