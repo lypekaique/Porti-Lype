@@ -39,7 +39,7 @@ const redes: React.FC = () => {
         ref={elementRef}
         className={`transform transition-opacity duration-700 ${
           isVisible
-            ? " items-center flex justify-between w-full flex-wrap max-md:justify-center max-md:flex-wrap max-sm:justify-center max-sm:flex-wrap max-sm:h-[23rem]  "
+            ? "opacity-100 items-center flex justify-between w-full flex-wrap max-md:justify-center max-md:flex-wrap max-sm:justify-center max-sm:flex-wrap max-sm:h-[23rem]  "
             : "opacity-0"
         }`}
       >
@@ -71,7 +71,7 @@ const redes: React.FC = () => {
         </a>
         <a
           href="https://www.linkedin.com/in/douglas-multima"
-          className=" opacity-100  animate-normal w-[25%] bg-[#0077b5] text-white h-[9rem] py-0 px-6 flex justify-between items-center cursor-pointer relative hover:bg-slate-800 max-sm:w-full max-sm:px-12 max-sm:justify-between max-sm:h-[4.5rem] max-sm:animate-fade-right max-sm:animate-duration-[1500ms]     "
+          className="  animate-normal w-[25%] bg-[#0077b5] text-white h-[9rem] py-0 px-6 flex justify-between items-center cursor-pointer relative hover:bg-slate-800 max-sm:w-full max-sm:px-12 max-sm:justify-between max-sm:h-[4.5rem] max-sm:animate-fade-right max-sm:animate-duration-[1500ms]     "
         >
           <p className="text-[3.5rem] font-semibold m-0 max-sm:text-[2.1rem]">
             Linkedin
@@ -91,7 +91,6 @@ const redes: React.FC = () => {
         </a>
         <a
           href=""
-          ref={elementRef as React.Ref<HTMLAnchorElement>}
           className=" opacity-100  animate-normal w-[25%] bg-[#1da1f2] text-white h-[9rem] py-0 px-6 flex justify-between items-center cursor-pointer relative hover:bg-slate-800 max-sm:w-full max-sm:px-12 max-sm:justify-between max-sm:h-[4.5rem] max-sm:animate-fade-right max-sm:animate-duration-[2000ms]   "
         >
           <p className="text-[3.5rem] font-semibold black m-0 max-sm:text-[2.1rem]">
@@ -112,7 +111,6 @@ const redes: React.FC = () => {
         </a>
         <a
           href=""
-          ref={elementRef as React.Ref<HTMLAnchorElement>}
           className="  w-[25%] bg-[#006cff] text-white h-[9rem] py-0 px-6 flex justify-between items-center cursor-pointer relative hover:bg-slate-800 max-sm:w-full max-sm:px-12 max-sm:justify-between max-sm:h-[4.5rem] max-sm:animate-fade-right max-sm:animate-duration-[2500ms]      "
         >
           {" "}
@@ -141,7 +139,6 @@ const redes: React.FC = () => {
         <a
           target="_blank"
           href="mailto:douglasmultima0@gmail.com"
-          ref={elementRef as React.Ref<HTMLAnchorElement>}
           className=" max-sm:animate-duration-[3000ms] max-sm:animate-fade-right  flex justify-center items-center w-full h-16 bg-[#10ba46] cursor-pointer hover:bg-slate-800      "
         >
           <p className="m-0 mb-[-0.3rem] text-[2.2rem] font-extrabold text-[#d0fbdd] uppercase">
