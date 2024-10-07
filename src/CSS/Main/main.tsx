@@ -2,7 +2,7 @@ import "../principais.scss";
 import "./style.scss";
 import face from "../../../public/img/1714930728994.jfif";
 import { useIntersectionObserver } from "../inview";
-import "../index.scss"
+import "../index.scss";
 
 const Main: React.FC = () => {
   const { isVisible, elementRef } = useIntersectionObserver(0); // Usando o hook com threshold de 50%
@@ -52,9 +52,7 @@ const Main: React.FC = () => {
               </h1>
             </div>
             <div>
-              <p
-                className="m-2 font-bold lowercase text-[18px] leading-[30px] tracking-[0.04em] opacity-80  sm:text-[20px] sm:leading-[21px] max-sm:text-[13px]"
-              >
+              <p className="m-2 font-bold lowercase text-[18px] leading-[30px] tracking-[0.04em] opacity-80  sm:text-[20px] sm:leading-[21px] max-sm:text-[13px]">
                 tenho experiência completa no processo de criação e
                 desenvolvimento, desde a concepção do layout até a implementação
                 do código. Trabalho com bancos de dados Firebase, APIs e
@@ -82,8 +80,8 @@ const Main: React.FC = () => {
                 src={face}
                 className="
                           xl:w-[500px] xl:h-[500px]
-                          sm:w-[480px] sm:h-[480px]
-                          max-sm:w-[380px] max-sm:h-[380px] rounded-full "
+                          max-sm:w-[380px] max-sm:h-[380px]
+                          rounded-full "
               />
             </div>
           </div>
@@ -94,5 +92,3 @@ const Main: React.FC = () => {
 };
 
 export default Main;
-
-
