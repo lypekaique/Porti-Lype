@@ -39,7 +39,7 @@ const Projetos: React.FC = () => {
         ref={elementRef}
         className={`transform transition-opacity duration-700 ${
           isVisible
-            ? "opacity-100 animate-fade-up  w-[46%] h-[7%] m-auto max-sm:w-[80%]  "
+            ? "opacity-100 animate-fade-up  w-[46%] h-[7%] m-auto max-sm:w-[100%]  "
             : "opacity-0"
         }`}
       >
@@ -53,9 +53,7 @@ const Projetos: React.FC = () => {
                       <img
                         src={img}
                         className="bg-cover bg-right rounded-[15px]
-                        h-[36rem]
-                                    md:w-[24rem] 
-                                    sm:w-[19rem]
+                                    h-[36rem]
                                     max-sm:h-[36rem] 
                                     max-sm:w-full"
                       />
