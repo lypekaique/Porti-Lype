@@ -45,16 +45,18 @@ const Projetos: React.FC = () => {
       >
         <Slider {...settings}>
           {data.map((d, index) => (
-            <div key={index} className="relative h-auto w-[27rem] group">
+            <div key={index} className="relative w-[27rem] group">
               {d.images && Array.isArray(d.images) && (
                 <Slider {...settings2}>
                   {d.images.map((img, idx) => (
                     <div key={idx} className=" w-[27rem] relative ">
                       <img
                         src={img}
-                        className="bg-cover bg-right rounded-[15px] 
+                        className="bg-cover bg-right rounded-[15px]
+                        h-[36rem]
                                     md:w-[24rem] 
-                                    sm:w-[19rem] 
+                                    sm:w-[19rem]
+                                    max-sm:h-[36rem] 
                                     max-sm:w-full"
                       />
 
@@ -62,7 +64,9 @@ const Projetos: React.FC = () => {
                         className="absolute inset-0 bg-black bg-opacity-75 text-white p-4 flex flex-col justify-center items-center rounded-[15px]
                            opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
                       >
-                        <p className="text-center text-xl p-4 mt-2">{d.review}</p>
+                        <p className="text-center text-xl p-4 mt-2">
+                          {d.review}
+                        </p>
 
                         <a href="https://github.com/DouglasMultima/Movie-Streaming">
                           <img
