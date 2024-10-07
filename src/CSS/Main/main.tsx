@@ -80,7 +80,7 @@ const Main: React.FC = () => {
                 src={face}
                 className="
                           xl:w-[500px] xl:h-[500px]
-                          max-sm:w-[260px] max-sm:h-[260px]
+                          max-sm:w-[200px] max-sm:h-[200px]
                           rounded-full "
               />
             </div>
