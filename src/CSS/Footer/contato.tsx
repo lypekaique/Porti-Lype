@@ -13,6 +13,7 @@ const redes: React.FC = () => {
         <div
           className="flex justify-center items-center w-full h-full
                     "
+                    
         >
           <div
             className="bg-[#12141d] rounded-lg px-8 py-1 shadow-[inset_0px_0px_4px_1px_rgba(20,233,86,1)] 
@@ -29,6 +30,7 @@ const redes: React.FC = () => {
                                                 md:text-[2.2rem] 
                                                 sm:text-[2rem] 
                                                 max-sm:text-[1.8rem]"
+                                                
             >
               Contato
             </h2>
@@ -155,7 +157,11 @@ const redes: React.FC = () => {
         <a
           target="_blank"
           href="mailto:douglasmultima0@gmail.com"
-          className=" max-sm:animate-duration-[3000ms] max-sm:animate-fade-right  flex justify-center items-center w-full h-16 bg-[#10ba46] cursor-pointer hover:bg-slate-800      "
+          className={
+            isVisible
+              ? " opacity-100 max-sm:animate-duration-[3000ms] max-sm:animate-fade-right  flex justify-center items-center w-full h-16 bg-[#10ba46] cursor-pointer hover:bg-slate-800 "
+              : "opacity-0"
+          }
         >
           <p className="m-0 mb-[-0.3rem] text-[2.2rem] font-extrabold text-[#d0fbdd] uppercase">
             E-mail
