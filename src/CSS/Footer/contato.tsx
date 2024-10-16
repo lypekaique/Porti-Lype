@@ -39,14 +39,18 @@ const redes: React.FC = () => {
         ref={elementRef}
         className={`transform transition-opacity duration-700 ${
           isVisible
-            ? "opacity-100 items-center flex justify-between w-full flex-wrap max-md:justify-center max-md:flex-wrap max-sm:justify-center max-sm:flex-wrap max-sm:h-[23rem]  "
+            ? "opacity-100 items-center flex justify-between w-full flex-wrap max-md:justify-center max-md:flex-wrap max-sm:justify-center max-sm:flex-wrap max-sm:h-[23rem] animate-fade-up max-sm:animate-none  "
             : "opacity-0"
         }`}
       >
         <a
           target="_blank"
           href="https://github.com/DouglasMultima"
-          className=" opacity-100  w-[25%] bg-[#333333] text-white h-[9rem] py-0 px-6 flex justify-between items-center cursor-pointer relative hover:bg-slate-800 max-sm:w-full max-sm:px-12 max-sm:justify-between max-sm:h-[4.5rem]  max-sm:animate-fade-right max-sm:animate-duration-[1000ms]  "
+          className={
+            isVisible
+              ? "opacity-100  w-[25%] bg-[#333333] text-white h-[9rem] py-0 px-6 flex justify-between items-center cursor-pointer relative hover:bg-slate-800 max-sm:w-full max-sm:px-12 max-sm:justify-between max-sm:h-[4.5rem]  max-sm:animate-fade-right max-sm:animate-duration-[1000ms]  "
+              : "opacity-0"
+          }
         >
           <p
             className="text-[3.5rem] font-semibold m-0
@@ -71,7 +75,11 @@ const redes: React.FC = () => {
         </a>
         <a
           href="https://www.linkedin.com/in/douglas-multima"
-          className="  animate-normal w-[25%] bg-[#0077b5] text-white h-[9rem] py-0 px-6 flex justify-between items-center cursor-pointer relative hover:bg-slate-800 max-sm:w-full max-sm:px-12 max-sm:justify-between max-sm:h-[4.5rem] max-sm:animate-fade-right max-sm:animate-duration-[1500ms]     "
+          className={
+            isVisible
+              ? "w-[25%] bg-[#0077b5] text-white h-[9rem] py-0 px-6 flex justify-between items-center cursor-pointer relative hover:bg-slate-800 max-sm:w-full max-sm:px-12 max-sm:justify-between max-sm:h-[4.5rem] max-sm:animate-fade-right max-sm:animate-duration-[1500ms]  "
+              : "opacity-0"
+          }
         >
           <p className="text-[3.5rem] font-semibold m-0 max-sm:text-[2.1rem]">
             Linkedin
@@ -91,7 +99,11 @@ const redes: React.FC = () => {
         </a>
         <a
           href=""
-          className=" opacity-100  animate-normal w-[25%] bg-[#1da1f2] text-white h-[9rem] py-0 px-6 flex justify-between items-center cursor-pointer relative hover:bg-slate-800 max-sm:w-full max-sm:px-12 max-sm:justify-between max-sm:h-[4.5rem] max-sm:animate-fade-right max-sm:animate-duration-[2000ms]   "
+          className={
+            isVisible
+              ? "opacity-100  animate-normal w-[25%] bg-[#1da1f2] text-white h-[9rem] py-0 px-6 flex justify-between items-center cursor-pointer relative hover:bg-slate-800 max-sm:w-full max-sm:px-12 max-sm:justify-between max-sm:h-[4.5rem] max-sm:animate-fade-right max-sm:animate-duration-[2000ms]  "
+              : "opacity-0"
+          }
         >
           <p className="text-[3.5rem] font-semibold black m-0 max-sm:text-[2.1rem]">
             Twitter
@@ -111,7 +123,11 @@ const redes: React.FC = () => {
         </a>
         <a
           href=""
-          className="  w-[25%] bg-[#006cff] text-white h-[9rem] py-0 px-6 flex justify-between items-center cursor-pointer relative hover:bg-slate-800 max-sm:w-full max-sm:px-12 max-sm:justify-between max-sm:h-[4.5rem] max-sm:animate-fade-right max-sm:animate-duration-[2500ms]      "
+          className={
+            isVisible
+              ? "w-[25%] bg-[#006cff] text-white h-[9rem] py-0 px-6 flex justify-between items-center cursor-pointer relative hover:bg-slate-800 max-sm:w-full max-sm:px-12 max-sm:justify-between max-sm:h-[4.5rem] max-sm:animate-fade-right max-sm:animate-duration-[2500ms]  "
+              : "opacity-0"
+          }
         >
           {" "}
           <p className="text-[3.5rem] font-semibold m-0 max-sm:text-[2.1rem]">
